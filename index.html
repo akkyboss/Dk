@@ -5,7 +5,7 @@
   <title>Akky Boss</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Meta Pixel Code -->
+  <!-- Meta Pixel Code (same as before) -->
   <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,70 +16,75 @@
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
 
-  fbq('init', 'YOUR_PIXEL_ID'); // 👈 apna Pixel ID daal
+  fbq('init', 'YOUR_PIXEL_ID');
   fbq('track', 'PageView');
   </script>
-
-  <noscript>
-  <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Meta Pixel Code -->
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
       height: 100vh;
-      background: radial-gradient(circle at center, #02213b, #000c18);
+      background: linear-gradient(135deg, #000c18, #02213b);
       display: flex;
       justify-content: center;
       align-items: center;
       color: white;
-      text-align: center;
     }
 
     .container {
-      max-width: 400px;
-      padding: 20px;
+      width: 90%;
+      max-width: 380px;
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      background: rgba(255,255,255,0.05);
+      box-shadow: 0 0 40px rgba(0, 170, 255, 0.3);
+      text-align: center;
     }
 
     h1 {
-      font-size: 34px;
-      color: #00d9ff;
-      text-shadow: 0 0 20px #00d9ff, 0 0 40px #00aaff;
+      font-size: 36px;
+      background: linear-gradient(90deg, #00e1ff, #00aaff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       margin-bottom: 10px;
     }
 
-    p {
-      margin: 8px 0;
-      color: #cfcfcf;
+    .subtitle {
+      color: #bbb;
+      margin-bottom: 15px;
+      font-size: 14px;
       letter-spacing: 1px;
     }
 
     .badge {
-      margin: 12px 0;
-      font-size: 14px;
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: rgba(0,170,255,0.2);
       color: #7fdfff;
+      font-size: 13px;
+      margin-bottom: 20px;
     }
 
     .btn {
-      margin-top: 25px;
       display: inline-block;
-      padding: 16px 30px;
-      border-radius: 40px;
-      background: linear-gradient(90deg, #66d9ff, #00aaff);
+      width: 100%;
+      padding: 15px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #00e1ff, #00aaff);
       color: white;
       font-weight: bold;
       text-decoration: none;
       font-size: 18px;
-      box-shadow: 0 0 20px rgba(0, 170, 255, 0.7);
-      animation: glow 1.5s infinite alternate;
+      box-shadow: 0 0 25px rgba(0, 170, 255, 0.6);
+      animation: pulse 1.5s infinite;
       transition: 0.3s;
     }
 
@@ -87,19 +92,15 @@
       transform: scale(1.05);
     }
 
-    @keyframes glow {
-      from {
-        box-shadow: 0 0 10px #00aaff;
-      }
-      to {
-        box-shadow: 0 0 25px #00e1ff;
-      }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px #00aaff; }
+      100% { box-shadow: 0 0 30px #00e1ff; }
     }
 
     .footer {
-      margin-top: 25px;
-      font-size: 12px;
-      color: #aaa;
+      margin-top: 20px;
+      font-size: 11px;
+      color: #888;
     }
   </style>
 </head>
@@ -109,19 +110,17 @@
   <div class="container">
     <h1>AKKY BOSS</h1>
 
-    <p>DAILY LIVE SURESHOT</p>
-    <p>JOIN TELEGRAM</p>
+    <div class="subtitle">JOIN TELEGRAM FOR DAILY UPDATES</div>
 
-    <div class="badge">⚡ Secure ⚡ Verified Channel</div>
+    <div class="badge">⚡ Trusted • Secure • Fast</div>
 
-    <!-- BUTTON WITH TRACKING -->
     <a href="https://t.me/YOUR_LINK" class="btn"
        onclick="fbq('track', 'Lead')">
-       🔥 JOIN TELEGRAM 🔥
+       🚀 JOIN TELEGRAM NOW
     </a>
 
     <div class="footer">
-      We do not assure or guarantee profits. Online gaming carries financial risk, and outcomes are uncertain.
+      This platform does not guarantee any earnings. Play responsibly.
     </div>
   </div>
 
